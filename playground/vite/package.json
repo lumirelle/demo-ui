@@ -1,5 +1,5 @@
 {
-  "name": "playground",
+  "name": "playground-vite",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   "devDependencies": {
     "@lumirelle/tsconfig": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
-    "demo-ui": "file:../",
+    "demo-ui": "file:../../",
     "vite": "catalog:build",
     "vue": "catalog:dev"
   }

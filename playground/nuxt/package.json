@@ -1,0 +1,15 @@
+{
+  "name": "playground-nuxt",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prepare": "nuxt prepare",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "demo-ui": "file:../../",
+    "nuxt": "catalog:playground"
+  }
+}

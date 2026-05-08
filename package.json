@@ -55,7 +55,7 @@
     "dist"
   ],
   "workspaces": {
-    "packages": [".", "playground"],
+    "packages": [".", "playground/vite", "playground/nuxt"],
     "catalogs": {
       "dev": {
         "bumpp": "^11.0.1",
@@ -72,6 +72,9 @@
         "@vitejs/plugin-vue": "^6.0.6",
         "vite": "^8.0.11",
         "vite-plugin-dts": "^5.0.0"
+      },
+      "playground": {
+        "nuxt": "^4.4.4"
       },
       "check": {
         "@antfu/eslint-config": "^8.2.0",
@@ -98,7 +101,8 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
-    "play": "bun run --cwd playground dev",
+    "play:vite": "bun run --cwd playground/vite dev",
+    "play:nuxt": "bun run --cwd playground/nuxt dev",
     "lint": "bun run --parallel oxlint eslint",
     "lint:fix": "oxlint --fix && eslint --fix",
     "typecheck": "tsc --build --noEmit",
