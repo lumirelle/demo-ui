@@ -42,7 +42,8 @@
         "typescript": "^6.0.3"
       },
       "build": {
-        "bunup": "^0.16.31"
+        "vite": "^8.0.11",
+        "vite-plugin-dts": "^5.0.0"
       },
       "check": {
         "@antfu/eslint-config": "^8.2.0",
@@ -66,9 +67,9 @@
   },
   "scripts": {
     "prepare": "simple-git-hooks",
-    "dev": "bunup --watch",
-    "build": "bunup --exports",
-    "start": "bun run ./src/index.ts",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview",
     "lint": "bun run --parallel oxlint eslint",
     "lint:fix": "oxlint --fix && eslint --fix",
     "typecheck": "tsc --build --noEmit",
@@ -87,7 +88,6 @@
     "@types/node": "catalog:types",
     "bumpp": "catalog:dev",
     "bun-types": "catalog:types",
-    "bunup": "catalog:build",
     "eslint": "catalog:check",
     "eslint-plugin-oxlint": "catalog:check",
     "knip": "catalog:check",
@@ -97,7 +97,9 @@
     "publint": "catalog:check",
     "simple-git-hooks": "catalog:dev",
     "tsnapi": "catalog:test",
-    "typescript": "catalog:types"
+    "typescript": "catalog:types",
+    "vite": "catalog:build",
+    "vite-plugin-dts": "catalog:build"
   },
   "overrides": {
     "typescript": "$typescript"
