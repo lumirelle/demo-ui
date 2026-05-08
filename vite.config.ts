@@ -7,9 +7,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        'index': 'src/index.ts',
-        'src/button': 'src/button/index.ts',
-        'src/input': 'src/input/index.ts',
+        index: 'src/index.ts',
+        button: 'src/button/index.ts',
+        input: 'src/input/index.ts',
       },
       name: 'DemoUI',
     },
@@ -21,6 +21,7 @@ export default defineConfig({
       },
     },
     emptyOutDir: true,
+    cssCodeSplit: true,
     // XXX(Lumirelle): Test only.
     minify: false,
   },

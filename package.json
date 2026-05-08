@@ -18,16 +18,35 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.js",
-        "development": "./src/index.ts"
+        "default": "./dist/index.js"
       },
       "require": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.cjs",
-        "development": "./src/index.ts"
+        "default": "./dist/index.cjs"
       }
     },
-    "./style.css": "./dist/demo-ui.css",
+    "./button": {
+      "import": {
+        "types": "./dist/button.d.ts",
+        "default": "./dist/button.js"
+      },
+      "require": {
+        "types": "./dist/button.d.ts",
+        "default": "./dist/button.cjs"
+      }
+    },
+    "./button.css": "./dist/button.css",
+    "./input": {
+      "import": {
+        "types": "./dist/input.d.ts",
+        "default": "./dist/input.js"
+      },
+      "require": {
+        "types": "./dist/input.d.ts",
+        "default": "./dist/input.cjs"
+      }
+    },
+    "./input.css": "./dist/input.css",
     "./package.json": "./package.json"
   },
   "module": "./dist/index.js",

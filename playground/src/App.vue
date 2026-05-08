@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { DemoInput } from 'demo-ui'
-import 'demo-ui/style.css'
+import DemoInput from 'demo-ui/input'
+import 'demo-ui/input.css'
 </script>
 
 <template>
