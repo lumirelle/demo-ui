@@ -22,20 +22,13 @@
         "default": "./dist/index.js"
       }
     },
-    "./button": {
+    "./*": {
       "import": {
-        "types": "./dist/button/index.d.ts",
-        "default": "./dist/button/index.js"
+        "types": "./dist/*/index.d.ts",
+        "default": "./dist/*/index.js"
       }
     },
-    "./button.css": "./dist/button.css",
-    "./input": {
-      "import": {
-        "types": "./dist/input/index.d.ts",
-        "default": "./dist/input/index.js"
-      }
-    },
-    "./input.css": "./dist/input.css",
+    "./*.css": "./dist/*.css",
     "./nuxt": {
       "import": {
         "types": "./dist/nuxt.d.ts",
@@ -78,7 +71,6 @@
   },
   "devDependencies": {
     "@lumirelle/tsconfig": "catalog:types",
-    "@nuxt/kit": "catalog:prod",
     "@types/node": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
     "@vue/language-core": "catalog:dev",
