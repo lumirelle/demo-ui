@@ -92,7 +92,8 @@
     "typescript": "catalog:types"
   },
   "overrides": {
-    "typescript": "$typescript"
+    "typescript": "catalog:types",
+    "vite": "catalog:build"
   },
   "simple-git-hooks": {
     "pre-commit": "bunx nano-staged"
