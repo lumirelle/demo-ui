@@ -18,11 +18,14 @@ export default defineConfig({
         'index': 'src/index.ts',
         'button/index': 'src/button/index.ts',
         'input/index': 'src/input/index.ts',
+        'nuxt': 'src/nuxt.ts',
+        'vite': 'src/vite.ts',
       },
       name: 'DemoUI',
+      formats: ['es'],
     },
     rolldownOptions: {
-      external: ['vue'],
+      external: ['vue', 'nuxt', '@nuxt/kit', 'unplugin-vue-components', /unplugin-vue-components\/.*/],
       // XXX(Lumirelle): Need check.
       output: {
         exports: 'named',

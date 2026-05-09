@@ -27,8 +27,5 @@
     "scss",
     "sass",
     "less"
-  ],
-
-  // JavaScript / TypeScript
-  "js/ts.tsdk.path": "node_modules\\typescript\\lib"
+  ]
 }

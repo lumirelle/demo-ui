@@ -20,20 +20,12 @@
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.cjs"
       }
     },
     "./button": {
       "import": {
         "types": "./dist/button/index.d.ts",
         "default": "./dist/button/index.js"
-      },
-      "require": {
-        "types": "./dist/button/index.d.ts",
-        "default": "./dist/button/index.cjs"
       }
     },
     "./button.css": "./dist/button.css",
@@ -41,13 +33,21 @@
       "import": {
         "types": "./dist/input/index.d.ts",
         "default": "./dist/input/index.js"
-      },
-      "require": {
-        "types": "./dist/input/index.d.ts",
-        "default": "./dist/input/index.cjs"
       }
     },
     "./input.css": "./dist/input.css",
+    "./nuxt": {
+      "import": {
+        "types": "./dist/nuxt.d.ts",
+        "default": "./dist/nuxt.js"
+      }
+    },
+    "./vite": {
+      "import": {
+        "types": "./dist/vite.d.ts",
+        "default": "./dist/vite.js"
+      }
+    },
     "./package.json": "./package.json"
   },
   "module": "./dist/index.js",
@@ -64,10 +64,21 @@
     "start": "vite preview"
   },
   "peerDependencies": {
+    "nuxt": "^3.0.0 || ^4.0.0",
     "vue": ">=3.5.0"
+  },
+  "peerDependenciesMeta": {
+    "nuxt": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@nuxt/kit": "catalog:prod",
+    "unplugin-vue-components": "catalog:prod"
   },
   "devDependencies": {
     "@lumirelle/tsconfig": "catalog:types",
+    "@nuxt/kit": "catalog:prod",
     "@types/node": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
     "@vue/language-core": "catalog:dev",
