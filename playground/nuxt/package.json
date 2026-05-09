@@ -6,7 +6,7 @@
     "prepare": "nuxt prepare",
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "preview": "nuxt preview"
+    "start": "nuxt preview"
   },
   "devDependencies": {
     "demo-ui": "workspace:*",

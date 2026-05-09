@@ -5,5 +5,8 @@ export default defineNuxtConfig({
     optimizeDeps: {
       exclude: ['demo-ui'],
     },
+    build: {
+      cssCodeSplit: true,
+    },
   },
 })
