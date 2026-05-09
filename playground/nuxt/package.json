@@ -9,7 +9,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "demo-ui": "file:../../",
+    "demo-ui": "workspace:*",
     "nuxt": "catalog:playground"
   }
 }

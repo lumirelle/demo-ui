@@ -1,0 +1,83 @@
+{
+  "name": "demo-ui",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "bun@1.3.13",
+  "description": "_description_",
+  "author": "Lumirelle <shabbyacc@outlook.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/lumirelle",
+  "homepage": "https://github.com/lumirelle/demo-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumirelle/demo-ui.git"
+  },
+  "bugs": "https://github.com/lumirelle/demo-ui/issues",
+  "keywords": [],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./button": {
+      "import": {
+        "types": "./dist/button/index.d.ts",
+        "default": "./dist/button/index.js"
+      },
+      "require": {
+        "types": "./dist/button/index.d.ts",
+        "default": "./dist/button/index.cjs"
+      }
+    },
+    "./button.css": "./dist/button.css",
+    "./input": {
+      "import": {
+        "types": "./dist/input/index.d.ts",
+        "default": "./dist/input/index.js"
+      },
+      "require": {
+        "types": "./dist/input/index.d.ts",
+        "default": "./dist/input/index.cjs"
+      }
+    },
+    "./input.css": "./dist/input.css",
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": ">=3.5.0"
+  },
+  "devDependencies": {
+    "@lumirelle/tsconfig": "catalog:types",
+    "@types/node": "catalog:types",
+    "@vitejs/plugin-vue": "catalog:build",
+    "@vue/language-core": "catalog:dev",
+    "bun-types": "catalog:types",
+    "typescript": "catalog:types",
+    "vite": "catalog:build",
+    "vite-plugin-dts": "catalog:build",
+    "vue": "catalog:dev"
+  },
+  "overrides": {
+    "typescript": "catalog:types"
+  }
+}

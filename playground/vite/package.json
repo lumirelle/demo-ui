@@ -9,8 +9,10 @@
   },
   "devDependencies": {
     "@lumirelle/tsconfig": "catalog:types",
+    "@types/node": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
-    "demo-ui": "file:../../",
+    "bun-types": "catalog:types",
+    "demo-ui": "workspace:*",
     "vite": "catalog:build",
     "vue": "catalog:dev"
   }

@@ -4,7 +4,7 @@ import oxlint from 'eslint-plugin-oxlint'
 
 export default antfu(
   {
-    vue: true,
+    type: 'lib',
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 ).override('antfu/perfectionist/setup', {

@@ -1,15 +1,23 @@
 import Vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import Dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [Vue()],
+  plugins: [
+    Vue(),
+    Dts({
+      tsconfigPath: './tsconfig.app.json',
+      processor: 'vue',
+      entryRoot: 'src',
+    }),
+  ],
 
   build: {
     lib: {
       entry: {
-        index: 'src/index.ts',
-        button: 'src/button/index.ts',
-        input: 'src/input/index.ts',
+        'index': 'src/index.ts',
+        'button/index': 'src/button/index.ts',
+        'input/index': 'src/input/index.ts',
       },
       name: 'DemoUI',
     },

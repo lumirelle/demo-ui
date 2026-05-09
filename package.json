@@ -6,7 +6,7 @@
     "packages": ["packages/*", "playground/*"],
     "catalogs": {
       "dev": {
-        "simple-git-hooks": "git+https://github.com/toplenboren/simple-git-hooks.git#7625657",
+        "@vue/language-core": "^3.2.8",
         "vue": "^3.5.34"
       },
       "types": {
@@ -33,7 +33,8 @@
         "nano-staged": "^1.0.2",
         "oxlint": "^1.63.0",
         "oxlint-tsgolint": "^0.22.1",
-        "publint": "^0.3.19"
+        "publint": "^0.3.19",
+        "simple-git-hooks": "git+https://github.com/toplenboren/simple-git-hooks.git#7625657"
       },
       "test": {
         "tsnapi": "^0.3.2"
@@ -75,7 +76,7 @@
     "oxlint": "catalog:check",
     "oxlint-tsgolint": "catalog:check",
     "publint": "catalog:check",
-    "simple-git-hooks": "catalog:dev",
+    "simple-git-hooks": "catalog:check",
     "tsnapi": "catalog:test",
     "typescript": "catalog:types"
   },
