@@ -46,7 +46,7 @@ export function DemoUIResolver(options: ResolverOptions = {}): ComponentResolver
         return
       return {
         name,
-        from: `demo-ui-dist/${slug}`,
+        from: `demo-ui/${slug}`,
       }
     },
   }

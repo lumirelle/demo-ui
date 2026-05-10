@@ -1,4 +1,5 @@
-import { addComponentsDir, createResolver, defineNuxtModule } from '@nuxt/kit'
+import { addComponentsDir, addVitePlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
+import Style from './vite/style'
 
 export interface ModuleOptions {
   /**
@@ -10,8 +11,8 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'demo-ui',
-    configKey: 'demoUI',
+    name: 'demo-ui-dist',
+    configKey: 'demoUIDist',
   },
   defaults: {
     prefix: 'Demo',
@@ -25,5 +26,6 @@ export default defineNuxtModule<ModuleOptions>({
       prefix: options.prefix,
       pathPrefix: false,
     })
+    addVitePlugin(Style())
   },
 })
