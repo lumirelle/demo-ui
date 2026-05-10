@@ -1,0 +1,19 @@
+{
+  "name": "playground-vite-dist",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "devDependencies": {
+    "@lumirelle/tsconfig": "catalog:types",
+    "@types/node": "catalog:types",
+    "@vitejs/plugin-vue": "catalog:build",
+    "bun-types": "catalog:types",
+    "demo-ui-dist": "workspace:*",
+    "vite": "catalog:build",
+    "vue": "catalog:dev"
+  }
+}

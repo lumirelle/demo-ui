@@ -1,5 +1,5 @@
 {
-  "name": "demo-ui",
+  "name": "demo-ui-dist",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -16,10 +16,30 @@
   "bugs": "https://github.com/lumirelle/demo-ui/issues",
   "keywords": [],
   "exports": {
-    ".": "./src/index.ts",
-    "./*": "./src/*/index.ts",
-    "./nuxt": "./src/nuxt.ts",
-    "./vite/*": "./src/vite/*.ts",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*/index.d.ts",
+        "default": "./dist/*/index.js"
+      }
+    },
+    "./nuxt": {
+      "import": {
+        "types": "./dist/nuxt.d.ts",
+        "default": "./dist/nuxt.js"
+      }
+    },
+    "./vite/*": {
+      "import": {
+        "types": "./dist/vite/*.d.ts",
+        "default": "./dist/vite/*.js"
+      }
+    },
     "./package.json": "./package.json"
   },
   "module": "./dist/index.js",
@@ -28,34 +48,7 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "public",
-    "exports": {
-      ".": {
-        "import": {
-          "types": "./dist/index.d.ts",
-          "default": "./dist/index.js"
-        }
-      },
-      "./*": {
-        "import": {
-          "types": "./dist/*/index.d.ts",
-          "default": "./dist/*/index.js"
-        }
-      },
-      "./nuxt": {
-        "import": {
-          "types": "./dist/nuxt.d.ts",
-          "default": "./dist/nuxt.js"
-        }
-      },
-      "./vite/*": {
-        "import": {
-          "types": "./dist/vite/*.d.ts",
-          "default": "./dist/vite/*.js"
-        }
-      },
-      "./package.json": "./package.json"
-    }
+    "access": "public"
   },
   "scripts": {
     "dev": "vite build --watch",

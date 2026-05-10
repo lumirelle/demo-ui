@@ -17,7 +17,7 @@ export interface ResolverOptions {
  * @example
  *
  * ```ts
- * import { DemoUIResolver } from 'demo-ui/vite'
+ * import { DemoUIResolver } from 'demo-ui-dist/vite'
  * import Components from 'unplugin-vue-components/vite'
  * import { defineConfig } from 'vite'
  *
@@ -46,7 +46,7 @@ export function DemoUIResolver(options: ResolverOptions = {}): ComponentResolver
         return
       return {
         name,
-        from: `demo-ui/${slug}`,
+        from: `demo-ui-dist/${slug}`,
       }
     },
   }
@@ -73,7 +73,7 @@ export interface PluginOptions extends ResolverOptions {
   dts?: boolean | string
 }
 
-export default function ViteComponentsPlugin(options: PluginOptions = {}): ReturnType<typeof Components> {
+export default function DemoUiComponents(options: PluginOptions = {}): ReturnType<typeof Components> {
   const { prefix = 'Demo', dts = 'components.d.ts' } = options
 
   return Components({
