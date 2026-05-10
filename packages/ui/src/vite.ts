@@ -1,6 +1,5 @@
 import type { ComponentResolver } from 'unplugin-vue-components'
 import Components from 'unplugin-vue-components/vite'
-import { name as packageName } from '../package.json'
 
 // #region Resolver
 
@@ -47,8 +46,7 @@ export function DemoUIResolver(options: ResolverOptions = {}): ComponentResolver
         return
       return {
         name,
-        from: `${packageName}/${slug}`,
-        sideEffects: `${packageName}/${slug}.css`,
+        from: `demo-ui/${slug}`,
       }
     },
   }

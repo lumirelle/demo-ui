@@ -15,36 +15,13 @@
   },
   "bugs": "https://github.com/lumirelle/demo-ui/issues",
   "keywords": [],
-  "sideEffects": [
-    "**/*.css"
-  ],
   "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    },
-    "./*": {
-      "import": {
-        "types": "./dist/*/index.d.ts",
-        "default": "./dist/*/index.js"
-      }
-    },
-    "./*.css": "./dist/*.css",
-    "./nuxt": {
-      "import": {
-        "types": "./dist/nuxt.d.ts",
-        "default": "./dist/nuxt.js"
-      }
-    },
-    "./vite": {
-      "import": {
-        "types": "./dist/vite.d.ts",
-        "default": "./dist/vite.js"
-      }
-    },
-    "./package.json": "./package.json"
+    ".": "./src/index.ts",
+    "./nuxt": "./src/nuxt.ts",
+    "./vite": "./src/vite.ts",
+    "./package.json": "./package.json",
+    "./*": "./src/*/index.ts",
+    "./*.css": "./src/*.css"
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -52,7 +29,35 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "exports": {
+      ".": {
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        }
+      },
+      "./*": {
+        "import": {
+          "types": "./dist/*/index.d.ts",
+          "default": "./dist/*/index.js"
+        }
+      },
+      "./*.css": "./dist/*.css",
+      "./nuxt": {
+        "import": {
+          "types": "./dist/nuxt.d.ts",
+          "default": "./dist/nuxt.js"
+        }
+      },
+      "./vite": {
+        "import": {
+          "types": "./dist/vite.d.ts",
+          "default": "./dist/vite.js"
+        }
+      },
+      "./package.json": "./package.json"
+    }
   },
   "scripts": {
     "dev": "vite",

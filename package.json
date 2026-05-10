@@ -80,6 +80,7 @@
     "@lumirelle/tsconfig": "catalog:types",
     "@types/node": "catalog:types",
     "bun-types": "catalog:types",
+    "demo-ui": "workspace:*",
     "eslint": "catalog:check",
     "eslint-plugin-oxlint": "catalog:check",
     "knip": "catalog:check",
