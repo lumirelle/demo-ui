@@ -1,7 +1,7 @@
 import { existsSync, readdirSync } from 'node:fs'
 import Vue from '@vitejs/plugin-vue'
+import Dts from 'unplugin-dts/vite'
 import { defineConfig } from 'vite'
-import Dts from 'vite-plugin-dts'
 
 const componentDirs = readdirSync('./src', { withFileTypes: true })
   .filter(dir => dir.isDirectory() && existsSync(`./src/${dir.name}/index.ts`))
